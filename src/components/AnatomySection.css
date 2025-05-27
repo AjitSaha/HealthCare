@@ -1,0 +1,220 @@
+.anatomy-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.anatomy-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 450px;
+}
+
+.anatomy-left {
+  position: relative;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.search-icon-container {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+}
+
+.anatomy-search-icon {
+  width: 20px;
+  height: 20px;
+  color: #9ca3af;
+}
+
+.anatomy-image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.anatomy-image {
+  height: 380px;
+  width: 280px;
+  object-fit: contain;
+  object-position: center;
+  z-index: 1;
+  border-radius: 8px;
+  /* Ensure image loads and displays */
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.health-indicator {
+  position: absolute;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.heart-indicator {
+  top: 25%;
+  right: -20%;
+  transform: translateX(-50%);
+  background-color: #4f46e5;
+}
+
+.leg-indicator {
+  bottom: 25%;
+  left: 30%;
+  transform: translateX(-50%);
+  background-color: #00d2c6;
+}
+
+.indicator-icon {
+  font-size: 16px;
+}
+
+.anatomy-slider {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 4px;
+  background-color: #e5e7eb;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.slider-handle {
+  position: absolute;
+  top: -4px;
+  left: 45%;
+  width: 12px;
+  height: 12px;
+  background-color: #9ca3af;
+  border-radius: 50%;
+}
+
+.anatomy-right {
+  background-color: #f9fafb;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.health-item {
+  margin-bottom: 28px;
+}
+
+.health-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.health-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.health-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  color: #6b7280;
+}
+
+.health-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.health-date {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.progress-container {
+  width: 100%;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #f3f4f6;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.progress-fill.success {
+  background-color: #10b981;
+}
+
+.progress-fill.warning {
+  background-color: #f59e0b;
+}
+
+.progress-fill.error {
+  background-color: #ef4444;
+}
+
+.details-link {
+  text-align: right;
+  margin-top: auto;
+}
+
+.details-text {
+  color: #4f46e5;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.details-text:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .anatomy-content {
+    grid-template-columns: 1fr;
+  }
+
+  .anatomy-left,
+  .anatomy-right {
+    padding: 16px;
+  }
+
+  .anatomy-image {
+    height: 250px;
+    width: 180px;
+  }
+
+  .health-item {
+    margin-bottom: 16px;
+  }
+}
