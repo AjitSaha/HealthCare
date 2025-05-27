@@ -1,6 +1,6 @@
 import { Search, Bell, Plus } from "lucide-react"
 import "./Header.css"
-
+import banner from '../image/243fbee1-e10b-41c9-b6a9-9827597824d0-1f9d3-2_320px.avif'
 const Header = () => {
   return (
     <header className="header">
@@ -20,7 +20,7 @@ const Header = () => {
         </button>
         <div className="user-avatar">
           <img
-            src="src\image\243fbee1-e10b-41c9-b6a9-9827597824d0-1f9d3-2_320px.avif"
+            src={banner}
             alt="User avatar"
             className="avatar-image"
           />
